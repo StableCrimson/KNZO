@@ -1,11 +1,11 @@
-from logger import Logger, TypeDelay
+from src.logger import Logger, TypeDelay
 
 
 '''
 https://github.com/Textualize/rich
 '''
 
-knzo = Logger("KNZO", initial_delay_ms=300)
+knzo = Logger(initial_delay_ms=300)
 
 knzo.info("Testing info")
 knzo.warn("Testing warning")

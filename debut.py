@@ -1,4 +1,4 @@
-from logger import Logger, TypeDelay, Loader
+from src.logger import Logger, TypeDelay, Loader
 
 OSIRIS_IP_ADDRESS = '1bb0:fdba:7aa5:6416:8939:33ed:3e59:1aa0'
 
@@ -55,7 +55,7 @@ STACK_TRACE = ''' RPC Error:
     at new t (/dev/sda3://hal/serial:1:656822) Object
     '''
 
-knzo = Logger("KNZO", initial_delay_ms=500, char_delay_ms=TypeDelay.NORMAL)
+knzo = Logger(initial_delay_ms=500, char_delay_ms=TypeDelay.NORMAL)
 
 # Give Osiris the SSH key
 knzo.info(f"Copying /usr/var/lib.pem > OSRS@{OSIRIS_IP_ADDRESS}")

@@ -1,5 +1,4 @@
-from logger import Logger, TypeDelay
-from textwrap import dedent
+from src.logger import Logger, TypeDelay
 
 # knzo = Logger("KNZO", char_delay_ms=TypeDelay.INSTANT, initial_delay_ms=250)
 knzo = Logger(char_delay_ms=TypeDelay.NORMAL, initial_delay_ms=200, max_line_length=125)
