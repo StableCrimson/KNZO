@@ -12,3 +12,16 @@ KNZO is a wrapper of the Python `rich` library that allows for logs and terminal
 KNZO outputs the scripted log directly to the terminal. However I am working on adding support for outputting the contents to an actual log file.
 
 Also on support for using `vhs` to allow the script to be recording and output as a GIF, MP4, or series of frames for use in video editing.
+
+## Examples
+
+Example code is in the `examples` folder.
+If you want to run the example code,
+simply run:
+
+```bash
+python -m examples.MODULE_NAME
+```
+
+For instance, running the spinner example:
+`python -m examples.spinner`
