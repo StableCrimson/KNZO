@@ -64,20 +64,9 @@ knzo.info("Copied")
 
 # Establish comms connection
 knzo.comms(f"Establishing connection with {OSIRIS_IP_ADDRESS}")
-knzo.spinner("Performing 3-way handshake", duration_ms=3000)
+knzo.spinner("Performing 3-way handshake", duration_ms=3000) # Make it seem like a process
 knzo.comms("Connection established")
 
-'''
-  TODO: Create another variable for delay between appended messages?
-  Something like:
-  Logger("KNZO", append_delay_ms=1234)
-  knzo.comms("Sending: Osiris, ", append=True, append_delay_ms=1234)
-  knzo.set_append_delay(1234)
-  knzo.clear_append_delay()
-
-  Then I don't have to change the overall MESSAGE delay every time I am chaining messages together
-  knzo.set_initial_delay(350) <- Can be deleted, so initial delay for new messages doesn't change!
-'''
 knzo.set_initial_delay(300) # Reduce pause between sentences.
 knzo.comms("Sending: Osiris, ", append=True)
 knzo.comms("I've just given you the access keys to the Library. ", append=True)
@@ -99,6 +88,7 @@ knzo.comms("Sending: I am. ", append=True)
 knzo.comms("That's why I'm telling you this. ", append=True)
 knzo.comms("I'm going to make sure we get Z-R0 back and you make it out.")
 
+# Start prepping the Guass cannon
 knzo.spinner("Mounting device /dev/sda3", duration_ms=4500)
 knzo.debug("Device /dev/sda3 mounted")
 knzo.spinner("Spawning Guass Cannon daemon", duration_ms=2000)
@@ -166,7 +156,8 @@ knzo.comms(":)", initial_delay_ms=500, char_delay_ms=TypeDelay.SLUGGISH)
 
 knzo.debug("Firing")
 
-knzo.set_initial_delay(100)
+# Crash
+knzo.set_initial_delay(100) # Make the message delay MUCH shorter. Makes it seem more urgent
 knzo.error(STACK_TRACE, char_delay_ms=1)
 knzo.error("Critical hardware damage detected!", char_delay_ms=TypeDelay.HYPER)
 knzo.error("Lost connection to camera interfaces 0-7!", char_delay_ms=TypeDelay.HYPER)
