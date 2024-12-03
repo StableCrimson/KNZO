@@ -16,7 +16,7 @@ knzo.error("Testing error")
 knzo.comms("Testing comms")
 knzo.debug("Testing debug")
 
-knzo.clear_initial_delay
+knzo.clear_initial_delay()
 
 '''
 If you want to simulate corruption, you can call `garbage`, which will print

@@ -5,6 +5,9 @@ Instead of adding a line of code for each sentence fragment, you can write your
 whole block of text and enable `autopause`! Then you can display your text with
 just a single line of code!
 
+The length of this pause can be changed by setting `sentence_pause_delay_ms`
+on the logger itself or by passing it into the print call.
+
 Autopause will insert a sentence pause when it detects the following characters:
   , . ; : ! ?
 '''
@@ -24,7 +27,6 @@ What defines who I am? The KNZO unit Osiris salvaged had all of my memories at o
 Does this imply the existence of a soul? Or that consciousness is a tangible, measurable artifact?
 If so, that suggests that it exists outside of simply memory, knowledge, and experience.
 Does this suggest that sentience isn't limited to living things?
-Maybe I'll contact the philosophy professors at the state university, I'd love to hear their thoughts.
 What an interesting world to be in!
 '''.splitlines())[1:] # Kinda bleh, might have to bake this into a function
 
